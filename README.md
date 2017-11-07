@@ -7,6 +7,14 @@
 - **Java competency**: Experienced.
 - **Prerequesties**: A machine that is able to run java programs and JDK 1.8 or higher ( to use GUAVA ).
 
+## Insights.
+- **Null is different from empty**. More specifically, when you **NEW** an object it is impossible for it to be null. If you use **return new Object(param)** in a function then the returned value is never null. Also in practice you usually are concern with the status of the returned value ,i.e. wether the returned value is usable. I mistakenly homogenized the usability, null and empty together and thus wrote the condition **if(returnedValue!=null)** which luckily only led to an extra member in the list while adding. Call isEmpty() solved the problem.
+
+- **In theory, theory and practice are the same. In practice, they are not**. For example, the concept of **FIRST** and **FOLLOW** can be easily explained on paper in less than half a paper. Writing the actual function that returns the correct set of values takes nearly a hundred lines of codes. It dawned on me how edifying the process of implementing what i learned is.
+
+- **Parsers are really fun**. The feeling when you compile and your code produces the desired output is probably universally pleasant among developers. But with parser, it is also accompanied with a certain sense of magic. The input consists of simply a grammar description and a sentence. One output is simply wether the sentence belongs to the grammar. Building a parse tree is the primary output but trivial once the classification is done. The black box seems almost elegant and only the creator can fully appreciate the inner workings.
+
+- **Everything has a price**. Implementing LR0 parser generator was a breeze. Implementing LR1 parser generator was miles from easy. The difficulty of implementation is proportional to the subset of languages covered by each parser. Just like talking is easy since it only leaves sensational traces that soon become distorted by recalling, while doing is exponentially harder because it carves into the very fabric of reality. Lol, too metaphysical there. 
 
 ## What does this program do ?
 - It takes a **LR(1**) grammar description and an input and decides wether the input belongs to the language described by the grammar.

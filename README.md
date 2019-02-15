@@ -11,11 +11,10 @@
 - **Prerequesties**: A machine that is able to run java programs and JDK 1.8 or higher ( to use GUAVA ).
 
 ## Insights.
-- **Null is different from empty**. More specifically, when you **NEW** an object it is impossible for it to be null. If you use **return new Object(param)** in a function then the returned value is never null. Also in practice you usually are concern with the status of the returned value ,i.e. wether the returned value is usable. I mistakenly homogenized the usability, null and empty together and thus wrote the condition **if(returnedValue!=null)** which luckily only led to an extra member in the list while adding. Call isEmpty() solved the problem.
 
 - **In theory, theory and practice are the same. In practice, they are not**. For example, the concept of **FIRST** and **FOLLOW** can be easily explained on paper in less than half a paper. Writing the actual function that returns the correct set of values takes nearly a hundred lines of codes. It dawned on me how edifying the process of implementing what I learned is.
 
-- **Parsers are really fun**. The feeling when you compile and your code produces the desired output is probably universally pleasant among developers. But with parser, it is also accompanied with a certain sense of magic. The input consists of simply a grammar description and a sentence, and the output is wether the sentence belongs to the grammer. It sounds like a normal human achievement, but with respect to programming it is almost elegant and only the creator can fully appreciate the inner workings.
+- **Parsers are really fun to implement**. The feeling when you compile and your code produces the desired output is probably universally pleasant among developers. But with parser, it is also accompanied with a certain sense of magic. The input consists of simply a grammar description and a sentence, and the output is wether the sentence belongs to the grammer. It sounds like a normal human achievement, but with respect to programming it is almost elegant and only the creator can fully appreciate the inner workings.
 
 - **Everything has a price**. Implementing LR0 parser generator was a breeze. Implementing LR1 parser generator was miles from easy. The difficulty of implementation is proportional to the subset of languages covered by each parser. Just like talking is easy since it only leaves sensational traces that soon become distorted by recalling, while doing is exponentially harder because it carves into the very fabric of reality. Lol, too metaphysical there. 
 
@@ -25,7 +24,7 @@
 **Tasks finished**:
 - [x] Finish the project. ( it generates correct output ) :relieved:
 - [ ] Error report. ( shift/reduce conflicts and reduce/reduce conflicts detection ) -- too lazy :innocent:
-- [ ] Reconsider the data structures and functions organization.  -- not interested
+- [ ] Reconsider the data structures and functions organization.
 
 ## The parser consists of the following packages that in turn consist of the designated classes:
 - **lr1_parser**:
